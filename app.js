@@ -13,21 +13,33 @@ var resetPressed = true;
 
 
 init();
-
+//This function calculates and displays the score
 function init(){
 	setupModeButtons();
 	setupSquares();
-	var lsScore = localStorage.getItem('score');
-	if( lsScore !== null ){
-		score = lsScore; 
-		scoreDisplay.textContent = score;
-	}
-	else {
-		localStorage.setItem('score', score); 
-	}
-	reset();
-}
+	let score= document.getElementById("score");
 
+	if(sessionStorage.getItem("autosave"));{
+
+	score.value=sessionStorage.getItem("autosave");
+	}
+	
+	score.addEventListener ("change", function(){
+
+	sessionStorage.setItem("autosave", score.value);
+	});
+
+	//var lsScore = localStorage.getItem('score');
+	//if( lsScore !== null ){
+	//	score = lsScore; 
+	//	scoreDisplay.textContent = score;
+	//}
+	//else {
+	///	localStorage.setItem('score', score); 
+	//}
+	//reset();
+}
+//This function sets the game mode, easy or hard
 function setupModeButtons(){
 	for(var i = 0; i < modeButtons.length; i++){
 		modeButtons[i].addEventListener("click", function(){
@@ -39,7 +51,7 @@ function setupModeButtons(){
 		});
 	}
 }
-
+//this is the function that says what to do it the correct or incorrect square is chosen.
 function setupSquares(){
 	for(var i = 0; i < squares.length; i++){
 	//add click listeners to squares
@@ -71,7 +83,7 @@ function setupSquares(){
 	}
 }
 
-
+//This changes the headline name and color when the correct color square is chosen
 async function updateColorName(){
 	const regex = /\([^\)]+\)/g; 
 	var rgbColors = pickedColor.match(regex); 
@@ -91,7 +103,7 @@ async function updateColorName(){
 		colorDisplay.textContent = colorData.name.value + "-ish"; 
 	}
 }
-
+//This function either resets the squares when play again or new colors is selected
 function reset(){
 	resetPressed = true;
 	colors = generateRandomColors(numSquares);
@@ -116,7 +128,7 @@ function reset(){
 resetButton.addEventListener("click", function(){
 	reset();
 })
-
+//This is what actually sets the random colors for the squares
 function changeColors(color){
 	//loop through all squares
 	for(var i = 0; i < squares.length; i++){
@@ -124,7 +136,7 @@ function changeColors(color){
 		squares[i].style.background = color;
 	}
 }
-
+//this tells is what to do as colors are chosen
 function pickColor(){
 	var random = Math.floor(Math.random() * colors.length);
 	return colors[random];
@@ -141,7 +153,7 @@ function generateRandomColors(num){
 	//return that array
 	return arr;
 }
-
+//this function sets the color to be chosen in the headline
 function randomColor(){
 	//pick a "red" from 0 - 255
 	var r = Math.floor(Math.random() * 256);
