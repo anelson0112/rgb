@@ -7,17 +7,25 @@ We&#39;re going to explore a website that you run right on your desktop today. U
 
     a.  How would you expand the game? What options or settings could you add? 
 
-    Maybe add a complimentary color choice as bonus points. Add sounds for correct or incorrect chices. Animation upon winning, confetti or something.
+    Maybe add a complimentary color choice as bonus points. Add sounds for correct or incorrect choices. Animation upon winning, confetti or something.
 
 3.  Using this documentation https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction to guide you: 
 
-    a.  What is the DOM? A programming interface that makes is so a document can be manipulated.
+    a.  What is the DOM? 
+    
+    A programming interface that makes is so a document can be manipulated.
 
-    b.  When is the DOM different than HTML? HTML is one language for writing a document. Dome is is independent that is the structure of a document.
+    b.  When is the DOM different than HTML? 
+    
+    HTML is one language for writing a document. Dome is is independent that is the structure of a document.
 
-    c.  What is the state of the DOM when you first load the page? Document ready. It is ready to read the document as it loads. The document provides an object by object reference to manipulate it. It loads the page ready to use.
+    c.  What is the state of the DOM when you first load the page? 
+    
+    Document ready. It is ready to read the document as it loads. The document provides an object by object reference to manipulate it. It loads the page ready to use.
 
-    d.  What is the state of the DOM if you turn off JavaScript and refresh the page? The DOM would not be accessible without the JS.
+    d.  What is the state of the DOM if you turn off JavaScript and refresh the page? 
+    
+    The DOM would not be accessible without the JS.
 
 4.  Now let's explore the code. Use the inspector to investigate the HTML, CSS and Javascript. 
 
@@ -61,7 +69,7 @@ We&#39;re going to explore a website that you run right on your desktop today. U
 
         v.  How does score keeping work? 
         
-        Through a function with a query selector document. It uses local storage, so the score stays with the game on the browser.
+        Through a function with a query selector through the document API. It uses local storage, so the score stays with the game on the browser.
 
         vi.  Why does it persist through closing the page? 
         
@@ -89,7 +97,7 @@ We&#39;re going to explore a website that you run right on your desktop today. U
 
         xiii.  What's an alternative to using fetch? 
         
-        XMLHttpRequest
+        XMLHttpRequest library AJAX
 
         xiv.  Why use one over the other? 
         
@@ -101,9 +109,11 @@ We&#39;re going to explore a website that you run right on your desktop today. U
 
     a.  Curiosity, need to be curious to weed through a bunch of code like that, it's interesting to see how everything changes.
         Initiative, need to have the drive to go work on it alone.
-        Deal with Uncertainty, looking at something not knowing how it will turn out, is great learning.
+        Deal with Uncertainty, looking at something not knowing how it will turn out, is great learning. We have to overcome the fear of not understanding to get what we can out of it.
         Observation Skills, that seem to be the main objective of this excercise.
         Engage in Analasys, a lot of what happens when I do this, what is the outcome if I do that.
+        Reflective learning, taking what we learn and absorbing that, so that we can better understand the processes when we put them into practice.
+        
 
 
 7.  Push your changes to Git.
